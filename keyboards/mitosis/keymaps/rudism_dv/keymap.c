@@ -77,7 +77,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
    /* Fn layout, mouse buttons and cursor movement
     * .--------------------------------------------..--------------------------------------------.
-    * |        | SCRTOG | UP     | MOUSE1 | MOUSE2 ||        |        | PGUP   | INS    | DEL    |
+    * |        | SCRTOG | UP     | MOUSE1 | MOUSE2 || ENTER  | SPACE  | PGUP   | INS    | DEL    |
     * |--------+--------+--------+--------+--------||--------+--------+--------+--------+--------|
     * | SCRHLD | LEFT   | DOWN   | RIGHT  | MOUSE3 || TAB    | HOME   | PGDN   | END    | BCKSPC |
     * |--------+--------+--------+--------+--------||--------+--------+--------+--------+--------|
@@ -90,7 +90,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     */
     [_FN] = LAYOUT( /* Function Layer, primary alternative layer featuring numpad on right hand,
                        cursor keys on left hand, and all symbols*/
-        XXXXXXX, PLPYTOG, KC_UP,   KC_BTN1, KC_BTN2, XXXXXXX, XXXXXXX, KC_PGUP, KC_INS,  KC_DEL,
+        XXXXXXX, PLPYTOG, KC_UP,   KC_BTN1, KC_BTN2, KC_ENT,  KC_SPC, KC_PGUP, KC_INS,  KC_DEL,
         PLPYHLD, KC_LEFT, KC_DOWN, KC_RGHT, KC_BTN3, KC_TAB,  KC_HOME, KC_PGDN, KC_END,  KC_BSPC,
         KC_F13,  KC_F14,  KC_F15,  KC_F16,  KC_F17,  KC_F18,  KC_F19,  KC_F20,  KC_F21,  KC_F22,
                  KC_F23,  _______, _______, _______, _______, _______, _______, KC_F24,
