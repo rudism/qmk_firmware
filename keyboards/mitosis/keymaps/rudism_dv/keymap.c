@@ -43,11 +43,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  *          '-----------------------------------''-----------------------------------'
  */
     [_STD] = LAYOUT( /* Standard; as compatible with dvorak and qwerty as possible */
-        KC_Q, KC_W, KC_E, KC_R, KC_T, KC_Y, KC_U, KC_I, KC_O, KC_P,
-        KC_A, KC_S, KC_D, KC_F, KC_G, KC_H, KC_J, KC_K, KC_L, KC_SCLN,
-        KC_Z, KC_X, KC_C, KC_V, KC_B, KC_N, KC_M, KC_COMM, KC_DOT, KC_SLSH,
-        KC_BTN1, KC_BTN2, KC_LCTL, KC_LGUI, KC_RGUI, KC_LALT, KC_MYCM, KC_PAUS,
-        PLPYTOG, KC_CAPS, KC_LSFT, LT(_FN,KC_ENT), LT(_NUM,KC_SPC), KC_RSFT, KC_BSPC, KC_PSCR
+      KC_Q, KC_W, KC_E, KC_R, KC_T, KC_Y, KC_U, KC_I, KC_O, KC_P,
+      KC_A, KC_S, KC_D, KC_F, KC_G, KC_H, KC_J, KC_K, KC_L, KC_SCLN,
+      KC_Z, KC_X, KC_C, KC_V, KC_B, KC_N, KC_M, KC_COMM, KC_DOT, KC_SLSH,
+      KC_BTN2, KC_BTN1, KC_LCTL, KC_LGUI, KC_RGUI, KC_LALT, KC_MYCM, KC_PAUS,
+      PLPYTOG, KC_CAPS, KC_LSFT, LT(_FN,KC_ENT), LT(_NUM,KC_SPC), KC_RSFT, KC_BSPC, KC_PSCR
     ),
 
 /* Number layout, for data entry and programming purposes (Dvorak result in parens)
@@ -87,11 +87,6 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  */
     [_FN] = LAYOUT( /* Function Layer, primary alternative layer featuring numpad on right hand,
                        cursor keys on left hand, and all symbols*/
-            /*KC_GRV,  _______, KC_MS_U, _______, _______,       KC_WH_U, KC_WH_L, KC_BTN3, KC_WH_R, KC_LBRC,
-              KC_ESC,  KC_MS_L, KC_MS_D, KC_MS_R, _______,       KC_WH_D, KC_BTN1, KC_BTN2, _______, KC_QUOT,
-              KC_APP,  KC_MPRV, KC_MPLY, KC_MSTP, KC_MNXT,       _______, KC_BSPC, KC_DEL,  KC_INS,  KC_BSLS,
-              KC_VOLU, _______, _______, _______,       _______, _______, KC_PGUP, _______,
-              KC_VOLD, _______, _______, _______,       _______, KC_HOME, KC_PGDN, KC_END*/
         KC_WH_U, PLPYHLD, KC_UP, KC_BTN1, KC_BTN2, KC_NO, KC_NO, KC_PGUP, KC_NO, KC_DEL,
         KC_WH_D, KC_LEFT, KC_DOWN, KC_RGHT, KC_BTN3, KC_TAB, KC_HOME, KC_PGDN, KC_END, KC_BSPC,
         KC_F13, KC_F14, KC_F15, KC_F16, KC_F17, KC_F18, KC_F19, KC_F20, KC_F21, KC_F22,
