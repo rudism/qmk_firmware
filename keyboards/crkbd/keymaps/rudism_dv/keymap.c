@@ -39,7 +39,7 @@ enum custom_keycodes
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [_STD] = LAYOUT_split_3x6_3(
   //,-----------------------------------------------------.                    ,-----------------------------------------------------.
-       KC_TAB,    KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,                         KC_Y,    KC_U,    KC_I,    KC_O,    KC_P, XXXXXXX,
+      XXXXXXX,    KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,                         KC_Y,    KC_U,    KC_I,    KC_O,    KC_P, XXXXXXX,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
       KC_CAPS,    KC_A,    KC_S,    KC_D,    KC_F,    KC_G,                         KC_H,    KC_J,    KC_K,    KC_L, KC_SCLN, KC_BSPC,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
@@ -52,7 +52,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
   [_NUM] = LAYOUT_split_3x6_3(
   //,-----------------------------------------------------.                    ,-----------------------------------------------------.
-      _______, XXXXXXX, _______, _______, KC_MINS,  KC_EQL,                      KC_RBRC, KC_QUOT,  KC_GRV, KC_LBRC, KC_BSLS, _______,
+      _______, _______, _______, _______, KC_MINS,  KC_EQL,                      KC_RBRC, KC_QUOT,  KC_GRV, KC_LBRC, KC_BSLS, _______,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
       _______,    KC_1,    KC_2,    KC_3,    KC_4,    KC_5,                         KC_6,    KC_7,    KC_8,    KC_9,    KC_0,  KC_DEL,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
@@ -64,9 +64,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
   [_FN] = LAYOUT_split_3x6_3(
   //,-----------------------------------------------------.                    ,-----------------------------------------------------.
-      _______, XXXXXXX, PLPYTOG,   KC_UP, KC_BTN1, KC_BTN2,                       KC_ENT,  KC_SPC, KC_PGUP,  KC_INS, KC_VOLU, _______,
+      _______, KC_PSCR, PLPYTOG,   KC_UP, KC_BTN1, KC_BTN2,                       KC_ENT,  KC_SPC, KC_PGUP,  KC_INS, KC_VOLU, _______,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-      _______, PLPYHLD, KC_LEFT, KC_DOWN, KC_RGHT, KC_BTN3,                       KC_TAB, KC_HOME, KC_PGDN,  KC_END, KC_MPLY,  KC_DEL,
+      _______, KC_BTN3, KC_LEFT, KC_DOWN, KC_RGHT, PLPYHLD,                       KC_TAB, KC_HOME, KC_PGDN,  KC_END, KC_MPLY,  KC_DEL,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
       _______, KC_WBAK, KC_WFWD, KC_WSCH, KC_WSTP, KC_WREF,                       KC_F11,  KC_F12, KC_MNXT, KC_MUTE, KC_VOLD, _______,
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
