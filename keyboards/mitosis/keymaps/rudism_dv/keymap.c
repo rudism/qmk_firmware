@@ -39,9 +39,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     * |--------+--------+--------+--------+--------||--------+--------+--------+--------+--------|
     * | Z      | X      | C      | V      | B      || N      | M      | ,      | .      | /      |
     * '--------+--------+--------+--------+--------||--------+--------+--------+--------+--------'
-    *          | MOUSE2 | MOUSE1 | LCTRL  | LGUI   || RGUI   | LALT   | PRTSCR | VOL+   |
+    *          | MOUSE2 | MOUSE1 | LCTRL  | CAPS   || BSPACE | LALT   | PRTSCR | VOL+   |
     *          |--------+--------+--------+--------||--------+--------+--------+--------|
-    *          | SCRHLD | CAPS   | LSHIFT | ENTER  || SPACE  | RSHIFT | BCKSPC | VOL-   |
+    *          | SCRHLD | LSHIFT | LGUI   | ENTER  || SPACE  | RGUI   | RSHIFT | VOL-   |
     *          '-----------------------------------''-----------------------------------'
     */
     [_STD] = LAYOUT( /* Standard; as compatible with dvorak and qwerty as possible
@@ -49,13 +49,13 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
       KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,    KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,
       KC_A,    KC_S,    KC_D,    KC_F,    KC_G,    KC_H,    KC_J,    KC_K,    KC_L,    KC_SCLN,
       KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,    KC_N,    KC_M,    KC_COMM, KC_DOT,  KC_SLSH,
-               KC_BTN2, KC_BTN1, KC_LCTL, KC_LGUI, KC_RGUI, KC_LALT, KC_PSCR, KC_VOLU,
-               PLPYHLD, KC_CAPS, KC_LSFT, LT_FN,   LT_NUM,  KC_RSFT, KC_BSPC, KC_VOLD
+               KC_BTN2, KC_BTN1, KC_LCTL, KC_CAPS, KC_BSPC, KC_LALT, KC_PSCR, KC_VOLU,
+               PLPYHLD, KC_LSFT, KC_LGUI, LT_FN,   LT_NUM,  KC_RGUI, KC_RSFT, KC_VOLD
     ),
 
    /* Number layout, for data entry and programming purposes (Dvorak result in parens)
     * .--------------------------------------------..--------------------------------------------.
-    * | CALC   |   (,<) |   (.>) | - ([{) | = (]}) || ] (=+) | ' (-_) | `      | [ (/?) | \      |
+    * | ('")   |   (,<) |   (.>) | - ([{) | = (]}) || ] (=+) | ' (-_) | `      | [ (/?) | \      |
     * |--------+--------+--------+--------+--------||--------+--------+--------+--------+--------|
     * | 1      | 2      | 3      | 4      | 5      || 6      | 7      | 8      | 9      | 0      |
     * |--------+--------+--------+--------+--------||--------+--------+--------+--------+--------|
@@ -67,7 +67,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     *          '-----------------------------------''-----------------------------------'
     */
     [_NUM] = LAYOUT( /* Number layout along the home row for maximum speed*/
-        KC_CALC, _______, _______, KC_MINS, KC_EQL,  KC_RBRC, KC_QUOT, KC_GRV,  KC_LBRC, KC_BSLS,
+        _______, _______, _______, KC_MINS, KC_EQL,  KC_RBRC, KC_QUOT, KC_GRV,  KC_LBRC, KC_BSLS,
         KC_1,    KC_2,    KC_3,    KC_4,    KC_5,    KC_6,    KC_7,    KC_8,    KC_9,    KC_0,
         KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   KC_F6,   KC_F7,   KC_F8,   KC_F9,   KC_F10,
                  _______, _______, _______, _______, _______, _______, _______, _______,
@@ -77,9 +77,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
    /* Fn layout, mouse buttons and cursor movement
     * .--------------------------------------------..--------------------------------------------.
-    * |        | SCRTOG | UP     | MOUSE1 | MOUSE2 || ENTER  | SPACE  | PGUP   | INS    | DEL    |
+    * | PRTSCR | SCRTOG | UP     | MOUSE1 | MOUSE2 || ENTER  | SPACE  | PGUP   | INS    | DEL    |
     * |--------+--------+--------+--------+--------||--------+--------+--------+--------+--------|
-    * | SCRHLD | LEFT   | DOWN   | RIGHT  | MOUSE3 || TAB    | HOME   | PGDN   | END    | BCKSPC |
+    * | MOUSE3 | LEFT   | DOWN   | RIGHT  | SCRHLD || TAB    | HOME   | PGDN   | END    | BCKSPC |
     * |--------+--------+--------+--------+--------||--------+--------+--------+--------+--------|
     * | BACK   | FORWRD | SEARCH | STOP   | REFRSH || F11    | F12    | EXEC   | COPY   | PASTE  |
     * '--------+--------+--------+--------+--------||--------+--------+--------+--------+--------'
@@ -90,8 +90,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     */
     [_FN] = LAYOUT( /* Function Layer, primary alternative layer featuring numpad on right hand,
                        cursor keys on left hand, and all symbols*/
-        XXXXXXX, PLPYTOG, KC_UP,   KC_BTN1, KC_BTN2, KC_ENT,  KC_SPC,  KC_PGUP, KC_INS,  KC_DEL,
-        PLPYHLD, KC_LEFT, KC_DOWN, KC_RGHT, KC_BTN3, KC_TAB,  KC_HOME, KC_PGDN, KC_END,  KC_BSPC,
+        KC_PSCR, PLPYTOG, KC_UP,   KC_BTN1, KC_BTN2, KC_ENT,  KC_SPC,  KC_PGUP, KC_INS,  KC_DEL,
+        KC_BTN3, KC_LEFT, KC_DOWN, KC_RGHT, PLPYHLD, KC_TAB,  KC_HOME, KC_PGDN, KC_END,  KC_BSPC,
         KC_WBAK, KC_WFWD, KC_WSCH, KC_WSTP, KC_WREF, KC_F11,  KC_F12,  KC_EXEC, KC_COPY, KC_PSTE,
                  _______, _______, _______, _______, _______, _______, _______, _______,
                  KC_BTN3, _______, _______, _______, _______, _______, _______, _______
